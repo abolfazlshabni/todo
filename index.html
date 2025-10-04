@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Todo App | TypeScript + Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: sans-serif; }
+    [x-cloak] { display: none !important; }
+  </style>
+</head>
+<body class="bg-gray-100 p-4">
+  <div class="max-w-xl mx-auto bg-white shadow rounded p-6">
+    <h1 class="text-2xl font-bold mb-4 text-center">📝 لیست کارها</h1>
+    
+    <form id="todo-form" class="flex gap-2 mb-4">
+      <input id="todo-input" class="flex-1 border p-2 rounded" type="text" placeholder="افزودن کار جدید..." />
+      <button class="bg-blue-600 text-white px-4 rounded" type="submit">افزودن</button>
+    </form>
+
+    <ul id="todo-list" class="space-y-2"></ul>
+
+    <div class="mt-6 flex justify-between">
+      <button id="clear-btn" class="text-red-600 hover:underline">پاک کردن همه</button>
+      <button id="toggle-all" class="text-blue-600 hover:underline">تغییر وضعیت همه</button>
+    </div>
+  </div>
+
+  <!-- TypeScript -->
+  <script type="module" src="./src/app.ts"></script>
+</body>
+</html>
